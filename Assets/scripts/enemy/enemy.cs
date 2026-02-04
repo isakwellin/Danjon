@@ -9,13 +9,13 @@ public class Enemy : MonoBehaviour
 {
     public Transform player;
     public float moveSpeed = 1f;
-    private Rigidbody2D rb;
+    private Rigidbody2D body;
     private UnityEngine.Vector2 movement;
     private SpriteRenderer sr;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        rb = this.GetComponent<Rigidbody2D>();
+        body = this.GetComponent<Rigidbody2D>();
         sr = this.GetComponent<SpriteRenderer>();
     }
 
@@ -23,12 +23,12 @@ public class Enemy : MonoBehaviour
     void Update()
     {
         UnityEngine.Vector3 direction = player.position - transform.position; //melee_enemy jämfört med player
-        rb.linearVelocityX = direction.x;
+        body.linearVelocityX = direction.x;
         direction.Normalize();
         movement = direction;
-        if (rb.linearVelocity.x > 0.01f)
+        if (body.linearVelocity.x > 0.01f)
             sr.flipX = false;
-        else if (rb.linearVelocity.x < -0.01f)
+        else if (body.linearVelocity.x < -0.01f)
             sr.flipX = true;
 
     }
@@ -39,6 +39,6 @@ public class Enemy : MonoBehaviour
     }
     void moveCharacter(UnityEngine.Vector2 direction)
     {
-        rb.MovePosition((UnityEngine.Vector2)transform.position + (direction * moveSpeed * Time.deltaTime));
+        body.MovePosition((UnityEngine.Vector2)transform.position + (direction * moveSpeed * Time.deltaTime));
     }
 }
