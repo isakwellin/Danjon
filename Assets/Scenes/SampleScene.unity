@@ -452,9 +452,69 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 710375509054827163, guid: 998af1c36ae0eb54f89ccf2d847558c6, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 728961096403487652, guid: 998af1c36ae0eb54f89ccf2d847558c6, type: 3}
+      propertyPath: m_CameraType
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 728961096403487652, guid: 998af1c36ae0eb54f89ccf2d847558c6, type: 3}
+      propertyPath: m_AllowXRRendering
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4193507667172426056, guid: 998af1c36ae0eb54f89ccf2d847558c6, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 22
+      objectReference: {fileID: 0}
+    - target: {fileID: 4193507667172426056, guid: 998af1c36ae0eb54f89ccf2d847558c6, type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4489508533129716449, guid: 998af1c36ae0eb54f89ccf2d847558c6, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6512372354546646147, guid: 998af1c36ae0eb54f89ccf2d847558c6, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -11
+      objectReference: {fileID: 0}
+    - target: {fileID: 8080671278035082223, guid: 998af1c36ae0eb54f89ccf2d847558c6, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 22
+      objectReference: {fileID: 0}
     - target: {fileID: 8208863768400284554, guid: 998af1c36ae0eb54f89ccf2d847558c6, type: 3}
       propertyPath: m_Name
       value: intro_room
+      objectReference: {fileID: 0}
+    - target: {fileID: 8767187395394155650, guid: 998af1c36ae0eb54f89ccf2d847558c6, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8767187395394155650, guid: 998af1c36ae0eb54f89ccf2d847558c6, type: 3}
+      propertyPath: m_ClearFlags
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 8767187395394155650, guid: 998af1c36ae0eb54f89ccf2d847558c6, type: 3}
+      propertyPath: orthographic
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8767187395394155650, guid: 998af1c36ae0eb54f89ccf2d847558c6, type: 3}
+      propertyPath: m_TargetDisplay
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8767187395394155650, guid: 998af1c36ae0eb54f89ccf2d847558c6, type: 3}
+      propertyPath: orthographic size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8767187395394155650, guid: 998af1c36ae0eb54f89ccf2d847558c6, type: 3}
+      propertyPath: m_AllowDynamicResolution
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8986743193846195969, guid: 998af1c36ae0eb54f89ccf2d847558c6, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 22
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
