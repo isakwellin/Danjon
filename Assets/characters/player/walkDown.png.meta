@@ -1,25 +1,31 @@
 fileFormatVersion: 2
-guid: 235819c1db28ca34eb8254618c4fa23a
+guid: 713883515f3ffca45b0a5f4f2d570cc1
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 7449745300179273800
-    second: "g\xE5 V_0"
+      213: 3035151610959782687
+    second: walkDown_0
   - first:
-      213: 8948648021804298231
-    second: "g\xE5 V_1"
+      213: 1523444996129750318
+    second: walkDown_1
   - first:
-      213: 7631725193480049562
-    second: "g\xE5 V_2"
+      213: -1027222243401790719
+    second: walkDown_2
   - first:
-      213: -4992365552689514397
-    second: "g\xE5 V_3"
+      213: -2762841984130886401
+    second: walkDown_3
   - first:
-      213: 713782212968147894
-    second: "g\xE5 V_4"
+      213: 7989353725888887101
+    second: walkDown_4
   - first:
-      213: -8213220615296371653
-    second: "g\xE5 V_5"
+      213: -4557359484392118943
+    second: walkDown_5
+  - first:
+      213: 7936811582387369018
+    second: walkDown_6
+  - first:
+      213: -3851306692753276925
+    second: walkDown_7
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -66,7 +72,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 32
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -111,137 +117,194 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: left_0
+      name: walkDown_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 32
-        height: 32
+        width: 96
+        height: 80
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: aa833116701958e4fb1a20379dea271e
-      internalID: -105481441
+      spriteID: f1366ba2f460f1a20800000000000000
+      internalID: 3035151610959782687
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: left_1
-      rect:
-        serializedVersion: 2
-        x: 32
-        y: 0
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d4ab8c9c01ef4ca4d91b7be6d91ef99e
-      internalID: -54058939
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: left_2
-      rect:
-        serializedVersion: 2
-        x: 64
-        y: 0
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 88bb94f390cd14b42811aad12ca3e1d8
-      internalID: 1110772449
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: left_3
+      name: walkDown_1
       rect:
         serializedVersion: 2
         x: 96
         y: 0
-        width: 32
-        height: 32
+        width: 96
+        height: 80
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 4357f5f68b1d0b2439bc99673f44e11b
-      internalID: 817807232
+      spriteID: e2df825072d542510800000000000000
+      internalID: 1523444996129750318
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: left_4
+      name: walkDown_2
       rect:
         serializedVersion: 2
-        x: 128
+        x: 192
         y: 0
-        width: 32
-        height: 32
+        width: 96
+        height: 80
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 9e942537f55f9be46a712916fe940444
-      internalID: -1716665029
+      spriteID: 10b08a4efc29eb1f0800000000000000
+      internalID: -1027222243401790719
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: left_5
+      name: walkDown_3
       rect:
         serializedVersion: 2
-        x: 160
+        x: 288
         y: 0
-        width: 32
-        height: 32
+        width: 96
+        height: 80
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 46b49fee13be69a4b8993089cfc142bb
-      internalID: -930373346
+      spriteID: ff4d7558ad968a9d0800000000000000
+      internalID: -2762841984130886401
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: walkDown_4
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 0
+        width: 96
+        height: 80
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d39fc8062e2efde60800000000000000
+      internalID: 7989353725888887101
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: walkDown_5
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 0
+        width: 96
+        height: 80
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 165ec03e1b101c0c0800000000000000
+      internalID: -4557359484392118943
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: walkDown_6
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 0
+        width: 96
+        height: 80
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a34b7694518352e60800000000000000
+      internalID: 7936811582387369018
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: walkDown_7
+      rect:
+        serializedVersion: 2
+        x: 672
+        y: 0
+        width: 96
+        height: 80
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3004b51d7f86d8ac0800000000000000
+      internalID: -3851306692753276925
       vertices: []
       indices: 
       edges: []
@@ -250,7 +313,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 31d1ef7027dbf704bb0d7342c07f80ab
+    spriteID: 16e2ae2b98f3cbf4187d9e262532d3a3
     internalID: 0
     vertices: []
     indices: 
@@ -260,14 +323,16 @@ TextureImporter:
     spriteCustomMetadata:
       entries:
       - key: SpriteEditor.SliceSettings
-        value: '{"sliceOnImport":false,"gridCellCount":{"x":6.0,"y":1.0},"gridSpriteSize":{"x":32.0,"y":32.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":8.0,"y":1.0},"gridSpriteSize":{"x":96.0,"y":80.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
-      left_0: -105481441
-      left_1: -54058939
-      left_2: 1110772449
-      left_3: 817807232
-      left_4: -1716665029
-      left_5: -930373346
+      walkDown_0: 3035151610959782687
+      walkDown_1: 1523444996129750318
+      walkDown_2: -1027222243401790719
+      walkDown_3: -2762841984130886401
+      walkDown_4: 7989353725888887101
+      walkDown_5: -4557359484392118943
+      walkDown_6: 7936811582387369018
+      walkDown_7: -3851306692753276925
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -1,25 +1,31 @@
 fileFormatVersion: 2
-guid: 8a3ca8c69032a3a4099cd320b23b6f24
+guid: 76e03cb9ef42d2d44b748b839fd05783
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -7406639451983108195
-    second: "g\xE5 H_0"
+      213: 8952305958209672428
+    second: walkSideways_0
   - first:
-      213: -2168568733486681103
-    second: "g\xE5 H_1"
+      213: -1265826138283928601
+    second: walkSideways_1
   - first:
-      213: -1348551700600811025
-    second: "g\xE5 H_2"
+      213: -6381825843817686254
+    second: walkSideways_2
   - first:
-      213: 3912891687189671698
-    second: "g\xE5 H_3"
+      213: 8512398149999384829
+    second: walkSideways_3
   - first:
-      213: 4673082113173251981
-    second: "g\xE5 H_4"
+      213: -9069321057495542679
+    second: walkSideways_4
   - first:
-      213: 4470928833014106027
-    second: "g\xE5 H_5"
+      213: -4712162822052387725
+    second: walkSideways_5
+  - first:
+      213: -2348494771980600058
+    second: walkSideways_6
+  - first:
+      213: -6428058393549454109
+    second: walkSideways_7
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -66,7 +72,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 32
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -111,137 +117,194 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: right_0
+      name: walkSideways_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 32
-        height: 32
+        width: 96
+        height: 80
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 08f491c7e82c31f40981b4b2228872bd
-      internalID: 2072202956
+      spriteID: ce453bf66dafc3c70800000000000000
+      internalID: 8952305958209672428
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: right_1
-      rect:
-        serializedVersion: 2
-        x: 32
-        y: 0
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 05dcbbd7b0072144ca8f5ed2184c9c16
-      internalID: -522401578
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: right_2
-      rect:
-        serializedVersion: 2
-        x: 64
-        y: 0
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a29454be3c0c84e48882f6f6c5bd1423
-      internalID: -1152418307
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: right_3
+      name: walkSideways_1
       rect:
         serializedVersion: 2
         x: 96
         y: 0
-        width: 32
-        height: 32
+        width: 96
+        height: 80
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 227592fbcffef3c4592f663bb592114e
-      internalID: -1200449916
+      spriteID: 7e39e2875d1ee6ee0800000000000000
+      internalID: -1265826138283928601
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: right_4
+      name: walkSideways_2
       rect:
         serializedVersion: 2
-        x: 128
+        x: 192
         y: 0
-        width: 32
-        height: 32
+        width: 96
+        height: 80
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: cb168666f95c1864d9dde3d40b097867
-      internalID: 207360338
+      spriteID: 21bd6d815333f67a0800000000000000
+      internalID: -6381825843817686254
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: right_5
+      name: walkSideways_3
       rect:
         serializedVersion: 2
-        x: 160
+        x: 288
         y: 0
-        width: 32
-        height: 32
+        width: 96
+        height: 80
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: c1bb21b8b92bd2342900757d413915dd
-      internalID: -1427199151
+      spriteID: df8d76d440d122670800000000000000
+      internalID: 8512398149999384829
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: walkSideways_4
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 0
+        width: 96
+        height: 80
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 964120eac8c432280800000000000000
+      internalID: -9069321057495542679
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: walkSideways_5
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 0
+        width: 96
+        height: 80
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 374e3c321e80b9eb0800000000000000
+      internalID: -4712162822052387725
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: walkSideways_6
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 0
+        width: 96
+        height: 80
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 60dfb3f9278786fd0800000000000000
+      internalID: -2348494771980600058
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: walkSideways_7
+      rect:
+        serializedVersion: 2
+        x: 672
+        y: 0
+        width: 96
+        height: 80
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3e44409c2f2fac6a0800000000000000
+      internalID: -6428058393549454109
       vertices: []
       indices: 
       edges: []
@@ -250,7 +313,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 6eb478d54df00aa48925024fba43cb29
+    spriteID: 208f3126336db8b45b47d8d19ff1c598
     internalID: 0
     vertices: []
     indices: 
@@ -260,14 +323,16 @@ TextureImporter:
     spriteCustomMetadata:
       entries:
       - key: SpriteEditor.SliceSettings
-        value: '{"sliceOnImport":false,"gridCellCount":{"x":6.0,"y":1.0},"gridSpriteSize":{"x":32.0,"y":32.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":8.0,"y":1.0},"gridSpriteSize":{"x":96.0,"y":80.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
-      right_0: 2072202956
-      right_1: -522401578
-      right_2: -1152418307
-      right_3: -1200449916
-      right_4: 207360338
-      right_5: -1427199151
+      walkSideways_0: 8952305958209672428
+      walkSideways_1: -1265826138283928601
+      walkSideways_2: -6381825843817686254
+      walkSideways_3: 8512398149999384829
+      walkSideways_4: -9069321057495542679
+      walkSideways_5: -4712162822052387725
+      walkSideways_6: -2348494771980600058
+      walkSideways_7: -6428058393549454109
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
