@@ -214,6 +214,34 @@ public partial class @inputMap: IInputActionCollection2, IDisposable
                     ""isPartOfComposite"": true
                 }
             ]
+        },
+        {
+            ""name"": ""playerRanged"",
+            ""id"": ""efef9c1d-2836-44a0-8f78-f06bff183b19"",
+            ""actions"": [
+                {
+                    ""name"": ""shoot"",
+                    ""type"": ""Button"",
+                    ""id"": ""03531c87-ba82-4b92-b201-cfabacddbbf4"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                }
+            ],
+            ""bindings"": [
+                {
+                    ""name"": """",
+                    ""id"": ""6bd7d0a1-dc5a-4a03-9c4d-9c4e1e8d70e6"",
+                    ""path"": ""<Mouse>/leftButton"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""shoot"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                }
+            ]
         }
     ],
     ""controlSchemes"": []
@@ -221,11 +249,15 @@ public partial class @inputMap: IInputActionCollection2, IDisposable
         // playerMovement
         m_playerMovement = asset.FindActionMap("playerMovement", throwIfNotFound: true);
         m_playerMovement_movement = m_playerMovement.FindAction("movement", throwIfNotFound: true);
+        // playerRanged
+        m_playerRanged = asset.FindActionMap("playerRanged", throwIfNotFound: true);
+        m_playerRanged_shoot = m_playerRanged.FindAction("shoot", throwIfNotFound: true);
     }
 
     ~@inputMap()
     {
         UnityEngine.Debug.Assert(!m_playerMovement.enabled, "This will cause a leak and performance issues, inputMap.playerMovement.Disable() has not been called.");
+        UnityEngine.Debug.Assert(!m_playerRanged.enabled, "This will cause a leak and performance issues, inputMap.playerRanged.Disable() has not been called.");
     }
 
     /// <summary>
@@ -393,6 +425,102 @@ public partial class @inputMap: IInputActionCollection2, IDisposable
     /// Provides a new <see cref="PlayerMovementActions" /> instance referencing this action map.
     /// </summary>
     public PlayerMovementActions @playerMovement => new PlayerMovementActions(this);
+
+    // playerRanged
+    private readonly InputActionMap m_playerRanged;
+    private List<IPlayerRangedActions> m_PlayerRangedActionsCallbackInterfaces = new List<IPlayerRangedActions>();
+    private readonly InputAction m_playerRanged_shoot;
+    /// <summary>
+    /// Provides access to input actions defined in input action map "playerRanged".
+    /// </summary>
+    public struct PlayerRangedActions
+    {
+        private @inputMap m_Wrapper;
+
+        /// <summary>
+        /// Construct a new instance of the input action map wrapper class.
+        /// </summary>
+        public PlayerRangedActions(@inputMap wrapper) { m_Wrapper = wrapper; }
+        /// <summary>
+        /// Provides access to the underlying input action "playerRanged/shoot".
+        /// </summary>
+        public InputAction @shoot => m_Wrapper.m_playerRanged_shoot;
+        /// <summary>
+        /// Provides access to the underlying input action map instance.
+        /// </summary>
+        public InputActionMap Get() { return m_Wrapper.m_playerRanged; }
+        /// <inheritdoc cref="UnityEngine.InputSystem.InputActionMap.Enable()" />
+        public void Enable() { Get().Enable(); }
+        /// <inheritdoc cref="UnityEngine.InputSystem.InputActionMap.Disable()" />
+        public void Disable() { Get().Disable(); }
+        /// <inheritdoc cref="UnityEngine.InputSystem.InputActionMap.enabled" />
+        public bool enabled => Get().enabled;
+        /// <summary>
+        /// Implicitly converts an <see ref="PlayerRangedActions" /> to an <see ref="InputActionMap" /> instance.
+        /// </summary>
+        public static implicit operator InputActionMap(PlayerRangedActions set) { return set.Get(); }
+        /// <summary>
+        /// Adds <see cref="InputAction.started"/>, <see cref="InputAction.performed"/> and <see cref="InputAction.canceled"/> callbacks provided via <param cref="instance" /> on all input actions contained in this map.
+        /// </summary>
+        /// <param name="instance">Callback instance.</param>
+        /// <remarks>
+        /// If <paramref name="instance" /> is <c>null</c> or <paramref name="instance"/> have already been added this method does nothing.
+        /// </remarks>
+        /// <seealso cref="PlayerRangedActions" />
+        public void AddCallbacks(IPlayerRangedActions instance)
+        {
+            if (instance == null || m_Wrapper.m_PlayerRangedActionsCallbackInterfaces.Contains(instance)) return;
+            m_Wrapper.m_PlayerRangedActionsCallbackInterfaces.Add(instance);
+            @shoot.started += instance.OnShoot;
+            @shoot.performed += instance.OnShoot;
+            @shoot.canceled += instance.OnShoot;
+        }
+
+        /// <summary>
+        /// Removes <see cref="InputAction.started"/>, <see cref="InputAction.performed"/> and <see cref="InputAction.canceled"/> callbacks provided via <param cref="instance" /> on all input actions contained in this map.
+        /// </summary>
+        /// <remarks>
+        /// Calling this method when <paramref name="instance" /> have not previously been registered has no side-effects.
+        /// </remarks>
+        /// <seealso cref="PlayerRangedActions" />
+        private void UnregisterCallbacks(IPlayerRangedActions instance)
+        {
+            @shoot.started -= instance.OnShoot;
+            @shoot.performed -= instance.OnShoot;
+            @shoot.canceled -= instance.OnShoot;
+        }
+
+        /// <summary>
+        /// Unregisters <param cref="instance" /> and unregisters all input action callbacks via <see cref="PlayerRangedActions.UnregisterCallbacks(IPlayerRangedActions)" />.
+        /// </summary>
+        /// <seealso cref="PlayerRangedActions.UnregisterCallbacks(IPlayerRangedActions)" />
+        public void RemoveCallbacks(IPlayerRangedActions instance)
+        {
+            if (m_Wrapper.m_PlayerRangedActionsCallbackInterfaces.Remove(instance))
+                UnregisterCallbacks(instance);
+        }
+
+        /// <summary>
+        /// Replaces all existing callback instances and previously registered input action callbacks associated with them with callbacks provided via <param cref="instance" />.
+        /// </summary>
+        /// <remarks>
+        /// If <paramref name="instance" /> is <c>null</c>, calling this method will only unregister all existing callbacks but not register any new callbacks.
+        /// </remarks>
+        /// <seealso cref="PlayerRangedActions.AddCallbacks(IPlayerRangedActions)" />
+        /// <seealso cref="PlayerRangedActions.RemoveCallbacks(IPlayerRangedActions)" />
+        /// <seealso cref="PlayerRangedActions.UnregisterCallbacks(IPlayerRangedActions)" />
+        public void SetCallbacks(IPlayerRangedActions instance)
+        {
+            foreach (var item in m_Wrapper.m_PlayerRangedActionsCallbackInterfaces)
+                UnregisterCallbacks(item);
+            m_Wrapper.m_PlayerRangedActionsCallbackInterfaces.Clear();
+            AddCallbacks(instance);
+        }
+    }
+    /// <summary>
+    /// Provides a new <see cref="PlayerRangedActions" /> instance referencing this action map.
+    /// </summary>
+    public PlayerRangedActions @playerRanged => new PlayerRangedActions(this);
     /// <summary>
     /// Interface to implement callback methods for all input action callbacks associated with input actions defined by "playerMovement" which allows adding and removing callbacks.
     /// </summary>
@@ -407,5 +535,20 @@ public partial class @inputMap: IInputActionCollection2, IDisposable
         /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
         /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
         void OnMovement(InputAction.CallbackContext context);
+    }
+    /// <summary>
+    /// Interface to implement callback methods for all input action callbacks associated with input actions defined by "playerRanged" which allows adding and removing callbacks.
+    /// </summary>
+    /// <seealso cref="PlayerRangedActions.AddCallbacks(IPlayerRangedActions)" />
+    /// <seealso cref="PlayerRangedActions.RemoveCallbacks(IPlayerRangedActions)" />
+    public interface IPlayerRangedActions
+    {
+        /// <summary>
+        /// Method invoked when associated input action "shoot" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// </summary>
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
+        void OnShoot(InputAction.CallbackContext context);
     }
 }

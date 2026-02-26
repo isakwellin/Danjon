@@ -6,15 +6,20 @@ using static UnityEngine.GraphicsBuffer;
 
 public class Enemy : MonoBehaviour
 {
-    //public Transform player;
-    public float moveSpeed = 1f;
+    //moveSpeed
+    [SerializeField] public float moveSpeed = 1f;
+
+    //rigidbody med mera
     private Rigidbody2D rb;
     private UnityEngine.Vector2 movement;
     private SpriteRenderer sr;
     GameObject player;
+
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        //hittar "Player" och GetComponent saker
         player = GameObject.FindWithTag("Player");
         rb = this.GetComponent<Rigidbody2D>();
         sr = this.GetComponent<SpriteRenderer>();
@@ -23,10 +28,15 @@ public class Enemy : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        UnityEngine.Vector3 direction = player.transform.position - transform.position; //melee_enemy jämfört med player
+        //gör så den vet åt vilket håll "Player" är åt
+        UnityEngine.Vector3 direction = player.transform.position - transform.position;
+
+        //gå saker
         rb.linearVelocityX = direction.x;
         direction.Normalize();
         movement = direction;
+
+        //gör så den kollar åt rätt håll
         if (rb.linearVelocity.x > 0.01f)
             sr.flipX = false;
         else if (rb.linearVelocity.x < -0.01f)
@@ -40,6 +50,7 @@ public class Enemy : MonoBehaviour
     }
     void moveCharacter(UnityEngine.Vector2 direction)
     {
+        //själva gåendet
         rb.MovePosition((UnityEngine.Vector2)transform.position + (direction * moveSpeed * Time.deltaTime));
     }
 }
