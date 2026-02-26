@@ -476,6 +476,54 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 710375509054827163, guid: 998af1c36ae0eb54f89ccf2d847558c6, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 710375509054827163, guid: 998af1c36ae0eb54f89ccf2d847558c6, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -8.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1431043770983951925, guid: 998af1c36ae0eb54f89ccf2d847558c6, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1431043770983951925, guid: 998af1c36ae0eb54f89ccf2d847558c6, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1431043770983951925, guid: 998af1c36ae0eb54f89ccf2d847558c6, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4193507667172426056, guid: 998af1c36ae0eb54f89ccf2d847558c6, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 16
+      objectReference: {fileID: 0}
+    - target: {fileID: 4193507667172426056, guid: 998af1c36ae0eb54f89ccf2d847558c6, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 6512372354546646147, guid: 998af1c36ae0eb54f89ccf2d847558c6, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 6512372354546646147, guid: 998af1c36ae0eb54f89ccf2d847558c6, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 8.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8080671278035082223, guid: 998af1c36ae0eb54f89ccf2d847558c6, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 18
+      objectReference: {fileID: 0}
+    - target: {fileID: 8080671278035082223, guid: 998af1c36ae0eb54f89ccf2d847558c6, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8080671278035082223, guid: 998af1c36ae0eb54f89ccf2d847558c6, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -4
+      objectReference: {fileID: 0}
     - target: {fileID: 8208863768400284554, guid: 998af1c36ae0eb54f89ccf2d847558c6, type: 3}
       propertyPath: m_Name
       value: intro_room
@@ -483,6 +531,18 @@ PrefabInstance:
     - target: {fileID: 8767187395394155650, guid: 998af1c36ae0eb54f89ccf2d847558c6, type: 3}
       propertyPath: orthographic size
       value: 5.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 8986743193846195969, guid: 998af1c36ae0eb54f89ccf2d847558c6, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 8986743193846195969, guid: 998af1c36ae0eb54f89ccf2d847558c6, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8986743193846195969, guid: 998af1c36ae0eb54f89ccf2d847558c6, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
