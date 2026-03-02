@@ -1,15 +1,15 @@
-using UnityEngine;
-using UnityEngine.InputSystem;
+using JetBrains.Annotations;
 using System.Collections;
 using System.Collections.Generic;
-using JetBrains.Annotations;
+using UnityEngine;
+using UnityEngine.EventSystems;
+using UnityEngine.InputSystem;
 //using System.Runtime.Remoting.Contexts;
 //runtime saken är onödig varför fanns den äns????????
 
 
 public class playerMovement : MonoBehaviour
 {
-
     //Initialiserar gubbens kropp och hastigheten
     [SerializeField] Rigidbody2D body;
     [SerializeField] float movementSpeed;
@@ -24,14 +24,16 @@ public class playerMovement : MonoBehaviour
 
     //X, Y
     private float horizontal;
-     private float vertical;
+    private float vertical;
 
     //Gör så att gubben rör sig
     private void FixedUpdate()
     {
+
         horizontal = _moveDirection.x;
         vertical = _moveDirection.y;
         body.linearVelocity = new Vector2(horizontal * movementSpeed, vertical * movementSpeed);
+
 
         //floats för att kolla vilken animation som ska köras
         animator.SetFloat("inputX",horizontal);

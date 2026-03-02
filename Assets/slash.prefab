@@ -11,11 +11,11 @@ GameObject:
   - component: {fileID: 2394056417418327785}
   - component: {fileID: 2037570593932217543}
   - component: {fileID: 748407885251923802}
-  - component: {fileID: 637830150786177100}
+  - component: {fileID: 1770626430320862360}
   - component: {fileID: -5441198219561021974}
   m_Layer: 9
-  m_Name: arrow
-  m_TagString: arrow
+  m_Name: slash
+  m_TagString: slash
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -30,7 +30,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -1.10712, y: 1.45, z: 0}
-  m_LocalScale: {x: 4, y: 4, z: 1}
+  m_LocalScale: {x: 40, y: 10, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -84,7 +84,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_MaskInteraction: 0
-  m_Sprite: {fileID: 21300000, guid: df4dc708bd8692446a6d5c3531ac377b, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 7a0568d5e3330b84687e307992be3030, type: 3}
   m_Color: {r: 1, g: 0, b: 0.80811405, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -121,8 +121,8 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 1
   m_Constraints: 0
---- !u!58 &637830150786177100
-CircleCollider2D:
+--- !u!60 &1770626430320862360
+PolygonCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -156,7 +156,27 @@ CircleCollider2D:
   m_CompositeOperation: 0
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
-  m_Radius: 0.08
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.11, y: 0.11}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: -0.030693477, y: 0.055}
+      - {x: -0.032283094, y: -0.0016677025}
+      - {x: -0.02989867, y: -0.055}
+      - {x: 0.012615587, y: -0.043316342}
+      - {x: 0.038309064, y: -0.010007279}
+      - {x: 0.0430779, y: 0.005}
+      - {x: 0.03277327, y: 0.015922498}
+      - {x: 0.02251713, y: 0.032099895}
+      - {x: 0.00864154, y: 0.046654515}
+  m_UseDelaunayMesh: 1
 --- !u!114 &-5441198219561021974
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -169,4 +189,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f39c141c101e59446b2afdfc72e2c848, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  speed: 10
+  speed: 0

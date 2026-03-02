@@ -6,9 +6,13 @@ public class bow : MonoBehaviour
     //så den vet om firePoint och arrowPrefab
     public Transform firePoint;
     public GameObject arrowPrefab;
+    public GameObject meleePrefab;
 
     //pew pew
     public InputActionReference shootAction;
+
+    //Kollar om melee
+    private bool isMelee = true;
 
     void OnEnable() 
     {
@@ -28,8 +32,16 @@ public class bow : MonoBehaviour
         shoot(); 
     }
 
+    //Kollar om melee eller ranged
     void shoot() 
-    { 
-        Instantiate(arrowPrefab, firePoint.position, firePoint.rotation); 
+    {
+        if (isMelee)
+        {
+            Instantiate(meleePrefab, firePoint.position, firePoint.rotation);
+        }
+        else
+        {
+            Instantiate(arrowPrefab, firePoint.position, firePoint.rotation);
+        }
     }
 }

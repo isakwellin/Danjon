@@ -9,6 +9,9 @@ public class arrow : MonoBehaviour
     //hastighet på pilen
     [SerializeField] public float speed = 10f;
     private Vector2 moveDirection;
+
+    //Bestämmer om melee eller ranged
+    private bool isMelee = true;
     
     public void Initialize(Vector2 direction)
     {
@@ -36,6 +39,14 @@ public class arrow : MonoBehaviour
 
         //förstör pilen
         Destroy(gameObject); 
+
+    }
+
+    //Metod som bestämmer hur länge melee attacken ska stanna kvar
+    void meleeAttackDuration()
+    {
+        Destroy(gameObject);
+        Destroy(this);
     }
     void Start()
     {
@@ -45,6 +56,13 @@ public class arrow : MonoBehaviour
     }
     void Update()
     {
+
+        //Om melee, istället ge attacken lite range och att den försvinner efter en viss tid
+        if (isMelee)
+        {
+            Invoke("meleeAttackDuration", 0.25f);
+        }
+
         transform.position += (Vector3)moveDirection * speed * Time.deltaTime;
     }
 
