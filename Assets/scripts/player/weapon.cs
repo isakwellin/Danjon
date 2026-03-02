@@ -12,7 +12,9 @@ public class bow : MonoBehaviour
     public InputActionReference shootAction;
 
     //Kollar om melee
-    private bool isMelee = true;
+    //static då vi ändå inte kommer ha att man kan ändra vpen mid runda
+    [SerializeField]
+    public static bool isMelee = true;
 
     void OnEnable() 
     {

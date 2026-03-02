@@ -10,9 +10,9 @@ public class arrow : MonoBehaviour
     [SerializeField] public float speed = 10f;
     private Vector2 moveDirection;
 
-    //Bestämmer om melee eller ranged
-    private bool isMelee = true;
-    
+    //tar ismelee från weapon.cs
+    private bow isMelee;
+
     public void Initialize(Vector2 direction)
     {
         moveDirection = direction;
@@ -50,15 +50,17 @@ public class arrow : MonoBehaviour
     }
     void Start()
     {
+
         //roterar och riktning
         RotateTowardsMouse();
         moveDirection = transform.right;
     }
     void Update()
     {
+        isMelee = GetComponent<bow>();
 
         //Om melee, istället ge attacken lite range och att den försvinner efter en viss tid
-        if (isMelee)
+        if (bow.isMelee)
         {
             Invoke("meleeAttackDuration", 0.25f);
         }

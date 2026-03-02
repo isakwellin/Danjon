@@ -170,3 +170,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: '::'
   speed: 10
+  isMelee: {fileID: 1816761235778008192, guid: 52ab725f7c5ff4645b72bdbb5318ac6d, type: 3}
