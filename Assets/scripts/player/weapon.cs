@@ -11,9 +11,15 @@ public class bow : MonoBehaviour
     //pew pew
     public InputActionReference shootAction;
 
-    //Kollar om melee
-    private bool isMelee = true;
+    [SerializeField] private int isMelee = 0;
 
+    //Kollar om melee
+    public void SetMelee(int value) //får isMelee
+    {
+        isMelee = value;
+    }
+
+    
     void OnEnable() 
     {
         //skjuter
@@ -33,15 +39,19 @@ public class bow : MonoBehaviour
     }
 
     //Kollar om melee eller ranged
-    void shoot() 
+    void shoot()
     {
-        if (isMelee)
+
+        if (isMelee == 1)
         {
-            Instantiate(meleePrefab, firePoint.position, firePoint.rotation);
+            GameObject melee = Instantiate(meleePrefab, firePoint.position, firePoint.rotation);
+            melee.GetComponent<arrow>().SetIsMelee(1);
         }
-        else
+        else if (isMelee == 2)
         {
-            Instantiate(arrowPrefab, firePoint.position, firePoint.rotation);
+            GameObject arrow = Instantiate(arrowPrefab, firePoint.position, firePoint.rotation);
+            arrow.GetComponent<arrow>().SetIsMelee(2);
         }
     }
+
 }
