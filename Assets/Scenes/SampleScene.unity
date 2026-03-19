@@ -195,6 +195,10 @@ PrefabInstance:
       propertyPath: aim
       value: 
       objectReference: {fileID: 577235806}
+    - target: {fileID: 4993075414230467672, guid: 52ab725f7c5ff4645b72bdbb5318ac6d, type: 3}
+      propertyPath: movementSpeed
+      value: 14
+      objectReference: {fileID: 0}
     - target: {fileID: 6339491492072631495, guid: 52ab725f7c5ff4645b72bdbb5318ac6d, type: 3}
       propertyPath: m_LocalScale.x
       value: 4
@@ -560,6 +564,22 @@ PrefabInstance:
       propertyPath: playerBow
       value: 
       objectReference: {fileID: 1392067468}
+    - target: {fileID: 8546303946316423004, guid: 09e2b84348afa6445bb22c52d12c3a0b, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 2.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8546303946316423004, guid: 09e2b84348afa6445bb22c52d12c3a0b, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 2.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8546303946316423004, guid: 09e2b84348afa6445bb22c52d12c3a0b, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -750
+      objectReference: {fileID: 0}
+    - target: {fileID: 8546303946316423004, guid: 09e2b84348afa6445bb22c52d12c3a0b, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 400
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

@@ -169,4 +169,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f39c141c101e59446b2afdfc72e2c848, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::arrow
-  speed: 100
+  speed: 10
