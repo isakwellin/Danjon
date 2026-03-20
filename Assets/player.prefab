@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 4588581902150405296}
   - component: {fileID: 1816761235778008192}
   - component: {fileID: 1365461507225431416}
+  - component: {fileID: 588165920501983501}
   m_Layer: 0
   m_Name: player
   m_TagString: Player
@@ -31,8 +32,8 @@ Transform:
   m_GameObject: {fileID: 1254627462037600025}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5.12, y: 1.49, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: -5.2, y: 0.38, z: 0}
+  m_LocalScale: {x: 4, y: 4, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 4869184760512390715}
@@ -78,7 +79,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::playerMovement
   body: {fileID: 5909586509590904696}
-  movementSpeed: 8
+  movementSpeed: 14
   move: {fileID: 2042852146456522017, guid: 704003f9efb3e214aabca2e9450b46e6, type: 3}
 --- !u!212 &8738013663719896511
 SpriteRenderer:
@@ -177,7 +178,11 @@ MonoBehaviour:
   arrowPrefab: {fileID: 603792675423356457, guid: 19c8699e318b72b41b7745011acc95d6, type: 3}
   meleePrefab: {fileID: 603792675423356457, guid: 0151e9b236a1b7a439e418ab025e0f9b, type: 3}
   shootAction: {fileID: 6942407307493838523, guid: 704003f9efb3e214aabca2e9450b46e6, type: 3}
+<<<<<<< Updated upstream:Assets/player.prefab
   isMelee: 1
+=======
+  isMelee: 0
+>>>>>>> Stashed changes:Assets/prefabs/player.prefab
 --- !u!61 &1365461507225431416
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -224,6 +229,21 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 0.6853714, y: 1.0143316}
   m_EdgeRadius: 0
+--- !u!114 &588165920501983501
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1254627462037600025}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e438b86063dd9884a84e25186bb39c6b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::health
+  maxHealth: 100
+  currentHealth: 0
+  slider: {fileID: 5422330461580927764, guid: a676b441aec1a6a4bb909baa6a343f2c, type: 3}
 --- !u!1 &1408960473440410083
 GameObject:
   m_ObjectHideFlags: 0

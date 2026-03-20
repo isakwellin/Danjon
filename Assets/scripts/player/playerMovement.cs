@@ -26,6 +26,7 @@ public class playerMovement : MonoBehaviour
     private float horizontal;
     private float vertical;
 
+
     //Gör så att gubben rör sig
     private void FixedUpdate()
     {
