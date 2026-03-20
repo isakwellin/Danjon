@@ -8,6 +8,7 @@ TagManager:
   - arrow
   - enemy
   - slash
+  - fireball
   layers:
   - Default
   - TransparentFX
