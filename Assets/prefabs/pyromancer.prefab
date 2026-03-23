@@ -106,7 +106,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::pyromancer
   moveSpeed: 3
-  player: {fileID: 0}
+  player: {fileID: 6339491492072631495, guid: 52ab725f7c5ff4645b72bdbb5318ac6d, type: 3}
   shotPoint: {fileID: 7664675512869506233}
   weapon: {fileID: 5548514921991317392}
   enemyProjectile: {fileID: 4970345914169873866, guid: 6ccd4f5664ccb3e44812a0a63ade2840, type: 3}

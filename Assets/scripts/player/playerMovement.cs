@@ -10,6 +10,9 @@ using UnityEngine.InputSystem;
 
 public class playerMovement : MonoBehaviour
 {
+
+    private static playerMovement instance;
+
     //Initialiserar gubbens kropp och hastigheten
     [SerializeField] Rigidbody2D body;
     [SerializeField] float movementSpeed;
@@ -25,6 +28,20 @@ public class playerMovement : MonoBehaviour
     //X, Y
     private float horizontal;
     private float vertical;
+
+    void Awake()
+    {
+        if (instance == null)
+        {
+            instance = this;
+            DontDestroyOnLoad(gameObject);
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
+    }
+
 
     //Gör så att gubben rör sig
     private void FixedUpdate()
