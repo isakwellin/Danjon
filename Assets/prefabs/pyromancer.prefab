@@ -11,9 +11,11 @@ GameObject:
   - component: {fileID: 7602813076996462905}
   - component: {fileID: 4195402607759123349}
   - component: {fileID: 8121308625943406676}
+  - component: {fileID: -817737633637381772}
+  - component: {fileID: 2461051217982465853}
   m_Layer: 0
   m_Name: pyromancer
-  m_TagString: Untagged
+  m_TagString: enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -106,7 +108,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::pyromancer
   moveSpeed: 3
-  player: {fileID: 6339491492072631495, guid: 52ab725f7c5ff4645b72bdbb5318ac6d, type: 3}
   shotPoint: {fileID: 7664675512869506233}
   weapon: {fileID: 5548514921991317392}
   enemyProjectile: {fileID: 4970345914169873866, guid: 6ccd4f5664ccb3e44812a0a63ade2840, type: 3}
@@ -114,6 +115,71 @@ MonoBehaviour:
   attackRange: 15
   rangeToBack: 10
   startTimeBetweenShots: 1
+--- !u!61 &-817737633637381772
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2390002466255489139}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.26, y: 0.29}
+    newSize: {x: 0.26, y: 0.29}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Size: {x: 0.26, y: 0.29}
+  m_EdgeRadius: 0
+--- !u!114 &2461051217982465853
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2390002466255489139}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e438b86063dd9884a84e25186bb39c6b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::health
+  maxHealth: 30
+  onDamaged:
+    m_PersistentCalls:
+      m_Calls: []
+  onHealed:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &4783980214606129466
 GameObject:
   m_ObjectHideFlags: 0

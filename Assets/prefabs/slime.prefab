@@ -14,6 +14,8 @@ GameObject:
   - component: {fileID: 5746024541008939767}
   - component: {fileID: 5173446033296555240}
   - component: {fileID: 6978819387738355492}
+  - component: {fileID: 2843195151681213128}
+  - component: {fileID: 2976473325248487289}
   m_Layer: 0
   m_Name: slime
   m_TagString: enemy
@@ -203,3 +205,38 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1.1602747, y: 0.92342854}
   m_EdgeRadius: 0
+--- !u!114 &2843195151681213128
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3208497686146426284}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e438b86063dd9884a84e25186bb39c6b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::health
+  maxHealth: 50
+  isPlayer: 0
+  onDamaged:
+    m_PersistentCalls:
+      m_Calls: []
+  onHealed:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &2976473325248487289
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3208497686146426284}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd74f4523ab3d9242b6965d566cbe23a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DMG
+  damage: 20
+  attackCooldown: 0.5
+  destroyOnHit: 0

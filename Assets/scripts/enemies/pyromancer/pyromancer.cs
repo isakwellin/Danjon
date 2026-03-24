@@ -4,7 +4,7 @@ public class pyromancer : MonoBehaviour
 {
 
     public float moveSpeed;
-    public Transform player;
+    GameObject player;
 
     //Variabeln som bestämmer var projectiles ska spawna
     public Transform shotPoint;
@@ -23,14 +23,18 @@ public class pyromancer : MonoBehaviour
     public float startTimeBetweenShots;
     private float timeBetweenShots;
 
+    private void Start()
+    {
+        player = GameObject.FindWithTag("Player");
+    }
     // Update is called once per frame
     void Update()
     {
-        Vector3 difference = player.position - weapon.transform.position;
+        Vector3 difference = player.transform.position - weapon.transform.position;
         float rotZ = Mathf.Atan2(difference.y, difference.x) * Mathf.Rad2Deg;
         weapon.transform.rotation = Quaternion.Euler(0f, 0f, rotZ);
 
-        if(Vector2.Distance(transform.position, player.position) < followPlayerRange && Vector2.Distance(transform.position, player.position) > attackRange)
+        if(Vector2.Distance(transform.position, player.transform.position) < followPlayerRange && Vector2.Distance(transform.position, player.transform.position) > attackRange)
         {
             inRange = true;
         } 
@@ -39,7 +43,7 @@ public class pyromancer : MonoBehaviour
             inRange = false;
         }
 
-        if(Vector2.Distance(transform.position, player.position) <= attackRange)
+        if(Vector2.Distance(transform.position, player.transform.position) <= attackRange)
         {
             if (timeBetweenShots <= 0)
             {
@@ -52,9 +56,9 @@ public class pyromancer : MonoBehaviour
             }
         }
 
-        if(Vector2.Distance(transform.position, player.position) <= rangeToBack)
+        if(Vector2.Distance(transform.position, player.transform.position) <= rangeToBack)
         {
-            Vector2 direction = transform.position - player.position;
+            Vector2 direction = transform.position - player.transform.position;
             transform.position = Vector2.MoveTowards(transform.position, (Vector2)transform.position + direction, moveSpeed * Time.deltaTime);
         }
     }
@@ -63,7 +67,7 @@ public class pyromancer : MonoBehaviour
     {
         if (inRange)
         {
-            transform.position = Vector2.MoveTowards(transform.position, player.position, moveSpeed * Time.deltaTime);
+            transform.position = Vector2.MoveTowards(transform.position, player.transform.position, moveSpeed * Time.deltaTime);
         }
     }
 }

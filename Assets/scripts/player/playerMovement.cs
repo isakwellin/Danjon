@@ -29,18 +29,12 @@ public class playerMovement : MonoBehaviour
     private float horizontal;
     private float vertical;
 
-    void Awake()
+    public void increaseSpeed(float multiplier)
     {
-        if (instance == null)
-        {
-            instance = this;
-            DontDestroyOnLoad(gameObject);
-        }
-        else
-        {
-            Destroy(gameObject);
-        }
+        movementSpeed *= multiplier; // speed multiplier för items
     }
+
+
 
 
     //Gör så att gubben rör sig
@@ -79,6 +73,27 @@ public class playerMovement : MonoBehaviour
         {
             animator.SetBool("isWalking", false);
         }
+    }
+
+    private IEnumerator damageBlink()
+    {
+
+        float elapsed = 0;
+
+        //Om tiden som har gått är under tiden som gubben ska vara oskadbar
+        while (elapsed < 0.5)
+        {
+            //Få spelaren att blinka till för att markera att han inte kan ta skada
+            spriteRenderer.color = new Color(spriteRenderer.color.r, spriteRenderer.color.b, spriteRenderer.color.b, 0.3f);
+            yield return new WaitForSeconds(0.1f);
+            spriteRenderer.color = new Color(spriteRenderer.color.r, spriteRenderer.color.b, spriteRenderer.color.b, 1);
+            yield return new WaitForSeconds(0.1f);
+
+            elapsed += 0.2f;
+        }
+
+        //Sätt tillbaka gubben till sitt normala tillstånd (inget blinkande)
+        spriteRenderer.color = new Color(spriteRenderer.color.r, spriteRenderer.color.b, spriteRenderer.color.b, 1);
     }
 
     //Läser av inputs

@@ -14,19 +14,19 @@ public class arrow : MonoBehaviour
 
     void Start()
     {
-        // 1. Get mouse world position
+        // mus position
         Vector3 mouseScreenPos = Mouse.current.position.ReadValue();
         Vector3 mouseWorldPos = Camera.main.ScreenToWorldPoint(mouseScreenPos);
         mouseWorldPos.z = 0f;
 
-        // 2. Calculate direction
+        // ta reda på riktningen
         Vector2 dir = (mouseWorldPos - transform.position).normalized;
 
-        // 3. Rotate arrow ONCE toward mouse
+        // rotera dit
         float angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
         transform.rotation = Quaternion.Euler(0, 0, angle);
 
-        // 4. Set movement direction
+        // skjut
         moveDirection = dir;
     }
 

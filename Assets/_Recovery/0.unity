@@ -119,17 +119,36 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &593232391 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5716542707226330322, guid: 09e2b84348afa6445bb22c52d12c3a0b, type: 3}
+  m_PrefabInstance: {fileID: 7141144590661232407}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &966679262 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 5218652251311839385, guid: 09e2b84348afa6445bb22c52d12c3a0b, type: 3}
   m_PrefabInstance: {fileID: 7141144590661232407}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 593232391}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 67db9e8f0e2ae9c40bc1e2b64352a6b4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Slider
+--- !u!114 &966679264
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 593232391}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 545da601012d52748ac96052be476a68, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: '::'
+  health: {fileID: 1392067471}
+  slider: {fileID: 966679262}
 --- !u!114 &1392067468 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1816761235778008192, guid: 52ab725f7c5ff4645b72bdbb5318ac6d, type: 3}
@@ -141,6 +160,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 60b582e4677a5d3488996afa5628dd9d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
+--- !u!114 &1392067471 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2509408567510302236, guid: 52ab725f7c5ff4645b72bdbb5318ac6d, type: 3}
+  m_PrefabInstance: {fileID: 1660583803}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e438b86063dd9884a84e25186bb39c6b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::health
 --- !u!1 &1491028071 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7178187473612206680, guid: 09e2b84348afa6445bb22c52d12c3a0b, type: 3}
@@ -162,13 +192,25 @@ PrefabInstance:
       propertyPath: slider
       value: 
       objectReference: {fileID: 966679262}
+    - target: {fileID: 2509408567510302236, guid: 52ab725f7c5ff4645b72bdbb5318ac6d, type: 3}
+      propertyPath: onDamaged.m_PersistentCalls.m_Calls.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2509408567510302236, guid: 52ab725f7c5ff4645b72bdbb5318ac6d, type: 3}
+      propertyPath: onDamaged.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4993075414230467672, guid: 52ab725f7c5ff4645b72bdbb5318ac6d, type: 3}
+      propertyPath: movementSpeed
+      value: 12
+      objectReference: {fileID: 0}
     - target: {fileID: 6339491492072631495, guid: 52ab725f7c5ff4645b72bdbb5318ac6d, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6339491492072631495, guid: 52ab725f7c5ff4645b72bdbb5318ac6d, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6339491492072631495, guid: 52ab725f7c5ff4645b72bdbb5318ac6d, type: 3}
       propertyPath: m_LocalPosition.z
@@ -511,6 +553,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 957935453383575342, guid: 09e2b84348afa6445bb22c52d12c3a0b, type: 3}
       insertIndex: -1
       addedObject: {fileID: 7141144590661232409}
+    - targetCorrespondingSourceObject: {fileID: 5716542707226330322, guid: 09e2b84348afa6445bb22c52d12c3a0b, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 966679264}
   m_SourcePrefab: {fileID: 100100000, guid: 09e2b84348afa6445bb22c52d12c3a0b, type: 3}
 --- !u!1 &7141144590661232408 stripped
 GameObject:
@@ -533,7 +578,7 @@ MonoBehaviour:
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
-  - {fileID: 1660583803}
   - {fileID: 7141144590661232407}
   - {fileID: 1978008863}
   - {fileID: 3878520853985669105}
+  - {fileID: 1660583803}

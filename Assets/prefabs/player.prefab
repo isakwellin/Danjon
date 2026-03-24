@@ -80,7 +80,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::playerMovement
   body: {fileID: 5909586509590904696}
-  movementSpeed: 14
+  movementSpeed: 12
   move: {fileID: 2042852146456522017, guid: 704003f9efb3e214aabca2e9450b46e6, type: 3}
 --- !u!212 &8738013663719896511
 SpriteRenderer:
@@ -238,12 +238,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e438b86063dd9884a84e25186bb39c6b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::health
-  spriteRenderer: {fileID: 8738013663719896511}
   maxHealth: 100
-  currentHealth: 0
-  iFrameDuration: 1
-  isInvincible: 0
-  slider: {fileID: 0}
+  isPlayer: 1
+  onDamaged:
+    m_PersistentCalls:
+      m_Calls: []
+  onHealed:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!114 &4778405079950678317
 MonoBehaviour:
   m_ObjectHideFlags: 0
