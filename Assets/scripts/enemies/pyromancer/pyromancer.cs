@@ -27,6 +27,45 @@ public class pyromancer : MonoBehaviour
     {
         player = GameObject.FindWithTag("Player");
     }
+
+
+    [SerializeField] private string enemyID;//enemyID
+
+
+    private void Awake()
+    {
+        if (string.IsNullOrEmpty(enemyID))
+        {
+            enemyID = System.Guid.NewGuid().ToString(); //ger nytt ID
+        }
+
+        if (gameManager.instance.deadEnemies.Contains(enemyID)) // kollar bland döda fiender
+        {
+            gameObject.SetActive(false);
+        }
+    }
+
+#if UNITY_EDITOR
+    private void OnValidate()
+    {
+        // Endast generera ID om objektet ligger i scenen, inte i en prefab
+        if (string.IsNullOrEmpty(enemyID) && gameObject.scene.IsValid())
+        {
+            enemyID = System.Guid.NewGuid().ToString();
+            UnityEditor.EditorUtility.SetDirty(this);
+        }
+    }
+#endif
+
+    public string ID => enemyID;
+    public void Die()
+    {
+        gameManager.instance.deadEnemies.Add(enemyID); //lägger ID i "död" fil ställe
+        gameObject.SetActive(false); //dödar fienden
+    }
+
+
+
     // Update is called once per frame
     void Update()
     {

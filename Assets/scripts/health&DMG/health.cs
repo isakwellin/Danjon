@@ -48,11 +48,25 @@ public class health : MonoBehaviour
         // dmg event
         onDamaged?.Invoke();
 
-        //Om health är 0, alltså man är död
+        //0hp=död
         if (currentHealth <= 0)
         {
             Debug.Log("Dead");
-            Destroy(gameObject);
+
+            Enemy enemy = GetComponent<Enemy>();
+            pyromancer enemy2 = GetComponent<pyromancer>();
+            if (enemy!= null)
+            {
+                enemy.Die();   // död i enemy saken
+            }
+            if (enemy2 != null)
+            {
+                enemy2.Die();
+            }
+            else
+            {
+                Destroy(gameObject); //player
+            }
         }
 
     }

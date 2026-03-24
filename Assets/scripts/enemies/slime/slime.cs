@@ -1,4 +1,5 @@
 using UnityEngine;
+using System.Collections.Generic;
 
 public class Enemy : MonoBehaviour
 {
@@ -11,6 +12,39 @@ public class Enemy : MonoBehaviour
     private SpriteRenderer sr;
     GameObject player;
 
+    [SerializeField] private string enemyID;//enemyID
+
+
+    private void Awake()
+    {
+        Debug.Log("Enemy spawned with ID: " + enemyID);
+
+        if (string.IsNullOrEmpty(enemyID))
+        {
+            enemyID = System.Guid.NewGuid().ToString();
+            Debug.Log("Generated new ID: " + enemyID);
+        }
+
+        if (gameManager.instance.deadEnemies.Contains(enemyID))
+        {
+            Debug.Log("Enemy already dead: " + enemyID);
+            gameObject.SetActive(false);
+        }
+    }
+
+#if UNITY_EDITOR
+    private void OnValidate()
+    {
+        // Endast generera ID om objektet ligger i scenen, inte i en prefab
+        if (string.IsNullOrEmpty(enemyID) && gameObject.scene.IsValid())
+        {
+            enemyID = System.Guid.NewGuid().ToString();
+            UnityEditor.EditorUtility.SetDirty(this);
+        }
+    }
+#endif
+
+    public string ID => enemyID;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -19,8 +53,16 @@ public class Enemy : MonoBehaviour
         player = GameObject.FindWithTag("Player");
         rb = this.GetComponent<Rigidbody2D>();
         sr = this.GetComponent<SpriteRenderer>();
-
     }
+
+
+    public void Die()
+    {
+        gameManager.instance.deadEnemies.Add(enemyID); //lägger ID i "död" fil ställe
+        gameObject.SetActive(false); //dödar fienden
+    }
+
+
 
     // Update is called once per frame
     void Update()

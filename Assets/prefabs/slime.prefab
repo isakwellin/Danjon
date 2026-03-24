@@ -132,6 +132,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Enemy
   moveSpeed: 2
+  enemyID: 
 --- !u!50 &5173446033296555240
 Rigidbody2D:
   serializedVersion: 5

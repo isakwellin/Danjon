@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 4692520a9d43eb543a29c10a244e42cf
+guid: f57fb5a1b7d74a145a2816f69fd4cd4c
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 8679083956544436308
-    second: battleRoom1_0
+      213: -3774848483396817042
+    second: maxHPShroom_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -96,30 +96,17 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: WebGL
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: battleRoom1_0
+      name: maxHPShroom_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 350
-        height: 196
+        x: 3
+        y: 1
+        width: 27
+        height: 29
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 4587f9defdc427870800000000000000
-      internalID: 8679083956544436308
+      spriteID: e6fe53aed4b0d9bc0800000000000000
+      internalID: -3774848483396817042
       vertices: []
       indices: 
       edges: []
@@ -148,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      battleRoom1_0: 8679083956544436308
+      maxHPShroom_0: -3774848483396817042
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
