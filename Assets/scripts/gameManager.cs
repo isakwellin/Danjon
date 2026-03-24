@@ -1,5 +1,6 @@
-using UnityEngine;
 using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.SceneManagement;
 
 
 public class gameManager : MonoBehaviour
@@ -16,6 +17,7 @@ public class gameManager : MonoBehaviour
         {
             instance = this;
             DontDestroyOnLoad(gameObject);
+            SceneManager.LoadScene("introRoom");
         }
         else
         { 

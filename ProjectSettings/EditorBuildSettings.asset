@@ -17,6 +17,12 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/battleRoom1.unity
     guid: df9cb65f7d9481a4699d08fa448a35cb
+  - enabled: 1
+    path: Assets/Scenes/lootRoom.unity
+    guid: 146bb5d75f82f96498a852374588eaaa
+  - enabled: 1
+    path: Assets/Scenes/battleRoom2.unity
+    guid: 05b61c8114ee68d4bbb5c7aa99631d14
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 704003f9efb3e214aabca2e9450b46e6, type: 3}
   m_UseUCBPForAssetBundles: 0
