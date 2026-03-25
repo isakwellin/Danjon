@@ -10,6 +10,9 @@ public class DMG : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision) // kollar efter träff
     {
+        if (collision.collider.CompareTag("enemy")) // för att ignorera enemy
+            return;
+
         dealDamage(collision.gameObject);
 
         if (destroyOnHit)
@@ -18,12 +21,15 @@ public class DMG : MonoBehaviour
 
     private void OnCollisionStay2D(Collision2D collision)
     {
+        if (collision.collider.CompareTag("enemy")) // för att ignorera enemy
+            return;
         dealDamage(collision.gameObject);
     }
 
-    private void dealDamage(GameObject target)
+    private void dealDamage(GameObject target) // dmg funktion
     {
-        if (Time.time < nextAttackTime) return;
+
+        if (Time.time < nextAttackTime) return; // behöver vänta tid innan den kan skada igen
 
         var health = target.GetComponent<health>();
         if (health != null)

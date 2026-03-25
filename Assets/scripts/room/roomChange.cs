@@ -20,7 +20,7 @@ public class roomChange : MonoBehaviour
 
     IEnumerator loadRoom(string levelName)
     {
-        // Starta transition
+        // transition saker
         transition.Rebind();
         transition.Update(0f);
         transition.SetTrigger("start");

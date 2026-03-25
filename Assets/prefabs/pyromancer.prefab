@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 8121308625943406676}
   - component: {fileID: -817737633637381772}
   - component: {fileID: 2461051217982465853}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: pyromancer
   m_TagString: enemy
   m_Icon: {fileID: 0}
@@ -115,6 +115,7 @@ MonoBehaviour:
   attackRange: 15
   rangeToBack: 10
   startTimeBetweenShots: 1
+  enemyID: 
 --- !u!61 &-817737633637381772
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -174,6 +175,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::health
   maxHealth: 30
+  isPlayer: 0
   onDamaged:
     m_PersistentCalls:
       m_Calls: []
@@ -189,7 +191,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5548514921991317392}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: weapon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -221,7 +223,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7664675512869506233}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: shotPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}

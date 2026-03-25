@@ -3,7 +3,9 @@ using UnityEngine;
 public class itemSpawner : MonoBehaviour
 {
     [Header("Items")]
-    public GameObject[] itemPrefabs;
+    public GameObject[] itemPrefabs; //lista med items
+
+    private GameObject currentItem;
 
     private void Start()
     {
@@ -18,10 +20,17 @@ public class itemSpawner : MonoBehaviour
             return;
         }
 
-        // Välj ett random item
-        int index = Random.Range(0, itemPrefabs.Length);
+        int index = Random.Range(0, itemPrefabs.Length); //väljer random item
         GameObject itemToSpawn = itemPrefabs[index];
 
-        Instantiate(itemToSpawn, transform.position, Quaternion.identity);
+        currentItem = Instantiate(itemToSpawn, transform.position, Quaternion.identity); //spawnar itemet
+    }
+
+    public void Respawn() //respawn funktion för att kunna restarta spelet
+    {
+        if (currentItem != null)
+            Destroy(currentItem);
+
+        TrySpawn();
     }
 }

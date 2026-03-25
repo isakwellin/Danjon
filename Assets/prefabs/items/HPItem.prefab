@@ -142,7 +142,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 790184d413d609a4ba840efcfae45db3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::maxHPItem
-  HPMultiplier: 1.4
+  HPMultiplier: 1.3
 --- !u!114 &-7966704356563546074
 MonoBehaviour:
   m_ObjectHideFlags: 0
