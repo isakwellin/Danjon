@@ -610,6 +610,17 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 7178187473612206680, guid: 09e2b84348afa6445bb22c52d12c3a0b, type: 3}
   m_PrefabInstance: {fileID: 7141144590661232407}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1544440891 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4993075414230467672, guid: 52ab725f7c5ff4645b72bdbb5318ac6d, type: 3}
+  m_PrefabInstance: {fileID: 1660583803}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 673667f1f951113478be083d25d9796d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::playerMovement
 --- !u!1001 &1660583803
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -806,7 +817,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: '::'
   gameOverPanel: {fileID: 407043555}
+  playerMovement: {fileID: 1544440891}
   playerHealth: {fileID: 1392067471}
+  isMelee: {fileID: 1392067468}
 --- !u!114 &2049826491
 MonoBehaviour:
   m_ObjectHideFlags: 0

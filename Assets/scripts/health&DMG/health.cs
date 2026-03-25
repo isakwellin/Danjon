@@ -79,7 +79,14 @@ public class health : MonoBehaviour
     }
 
 
-    public void heal(int amount) // healing för om det skulle vara med
+    public void resetHealth() // resetta hp
+    {
+        maxHealth = 100;
+        currentHealth = maxHealth;
+        onHealed?.Invoke();
+    }
+
+    public void heal(int amount) // healing för mob drops
     {
         currentHealth += amount;
         currentHealth = Mathf.Clamp(currentHealth, 0, maxHealth);

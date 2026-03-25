@@ -29,6 +29,11 @@ public class playerMovement : MonoBehaviour
     private float horizontal;
     private float vertical;
 
+
+    public void resetSpeed() // reset speed
+    {
+        movementSpeed = 12f;
+    }
     public void increaseSpeed(float multiplier)
     {
         movementSpeed *= multiplier; // speed multiplier för items
@@ -74,6 +79,7 @@ public class playerMovement : MonoBehaviour
             animator.SetBool("isWalking", false);
         }
     }
+
 
     private IEnumerator damageBlink()
     {

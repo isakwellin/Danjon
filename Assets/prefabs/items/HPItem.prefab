@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 6183035038305895656}
   - component: {fileID: 4803265918530724805}
   - component: {fileID: -7966704356563546074}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: HPItem
   m_TagString: Untagged
   m_Icon: {fileID: 0}

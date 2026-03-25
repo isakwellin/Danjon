@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 6978819387738355492}
   - component: {fileID: 2843195151681213128}
   - component: {fileID: 2976473325248487289}
+  - component: {fileID: -3969254570564314766}
   m_Layer: 6
   m_Name: slime
   m_TagString: enemy
@@ -241,3 +242,17 @@ MonoBehaviour:
   damage: 20
   attackCooldown: 0.5
   destroyOnHit: 0
+--- !u!114 &-3969254570564314766
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3208497686146426284}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c2c8999ff5b7aca42b4f2fee30168e71, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::healingItem
+  healingItemPrefab: {fileID: 6413454546111953686, guid: d662763821122bb439c6ae4f86c38fe2, type: 3}
+  dropChance: 0.3

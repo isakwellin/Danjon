@@ -7,7 +7,9 @@ public class gameManager : MonoBehaviour
 {
     public static gameManager instance;
     public GameObject gameOverPanel;
+    public playerMovement playerMovement;
     public health playerHealth;
+    public bow isMelee;
 
     public HashSet<string> deadEnemies = new HashSet<string>(); //hash för enemies
 
@@ -30,8 +32,9 @@ public class gameManager : MonoBehaviour
 
     public void gameOver()
     {
+
         gameOverPanel.SetActive(true);
-        Time.timeScale = 0.0001f; // Pausar spelet
+        Time.timeScale = 1f; // Pausar spelet
     }
 
 
@@ -50,7 +53,12 @@ public class gameManager : MonoBehaviour
         {
             spawner.Respawn();
         }
-        playerHealth.heal(100);// full heal till gubben
+
+        // RÖR ALDRIG DENNA KOD JAG VET VERKLIGEN ITNE VARFÖR DEN FUINKAR SNÄLLA VÄLLING JAG KOMMER GRÅTA OM DU RÖR DEN SNÄLLA SNÄLLA SNÄLLA
+        playerMovement.resetSpeed();
+        playerHealth.resetHealth();
+        isMelee.SetMelee(0);
+
         gameOverPanel.SetActive(false); //stänger av ui
 
 

@@ -14,7 +14,7 @@ public class itemSpawner : MonoBehaviour
 
     void TrySpawn()
     {
-        if (itemPrefabs.Length == 0)
+        if (itemPrefabs.Length == 0) // debug
         {
             Debug.LogWarning("Inga itemPrefabs");
             return;
