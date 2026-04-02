@@ -10,6 +10,7 @@ public class gameManager : MonoBehaviour
     public playerMovement playerMovement;
     public health playerHealth;
     public bow isMelee;
+    public GameObject victory;
 
     public HashSet<string> deadEnemies = new HashSet<string>(); //hash för enemies
 
@@ -27,14 +28,21 @@ public class gameManager : MonoBehaviour
         { 
             Destroy(gameObject);
         }
-        playerHealth.onPlayerDeath += gameOver;
+        playerHealth.onPlayerDeath += gameOver; // om gameOver
     }
+
+
+    public void victoryPanel()
+    {
+        victory.SetActive(true);
+    }
+
 
     public void gameOver()
     {
 
         gameOverPanel.SetActive(true);
-        Time.timeScale = 1f; // Pausar spelet
+        Time.timeScale = 1f; // Pausar INTE spelet, pausade förut spelet men skapade buggar när den pausades så ändrade på det
     }
 
 
@@ -59,6 +67,7 @@ public class gameManager : MonoBehaviour
         playerHealth.resetHealth();
         isMelee.SetMelee(0);
 
+        victory.SetActive(false);
         gameOverPanel.SetActive(false); //stänger av ui
 
 

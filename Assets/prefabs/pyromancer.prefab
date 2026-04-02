@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: -817737633637381772}
   - component: {fileID: 2461051217982465853}
   - component: {fileID: 260577043483661502}
+  - component: {fileID: 5725716013701878671}
   m_Layer: 6
   m_Name: pyromancer
   m_TagString: enemy
@@ -113,7 +114,7 @@ MonoBehaviour:
   weapon: {fileID: 5548514921991317392}
   enemyProjectile: {fileID: 4970345914169873866, guid: 6ccd4f5664ccb3e44812a0a63ade2840, type: 3}
   followPlayerRange: 25
-  attackRange: 15
+  attackRange: 25
   rangeToBack: 10
   startTimeBetweenShots: 1
   enemyID: 
@@ -197,6 +198,33 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::healingItem
   healingItemPrefab: {fileID: 6413454546111953686, guid: d662763821122bb439c6ae4f86c38fe2, type: 3}
   dropChance: 0.3
+--- !u!50 &5725716013701878671
+Rigidbody2D:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2390002466255489139}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &4783980214606129466
 GameObject:
   m_ObjectHideFlags: 0

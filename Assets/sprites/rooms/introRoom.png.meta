@@ -3,8 +3,8 @@ guid: 321aa0989ee6a9248b055cb660e81a16
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 8070635261161620413
-    second: intro room1.2_0
+      213: 3869300556499650861
+    second: introRoom_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -87,21 +87,8 @@ TextureImporter:
     buildTarget: Standalone
     maxTextureSize: 2048
     resizeAlgorithm: 0
-    textureFormat: 10
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: WebGL
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -113,7 +100,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: intro room1.2_0
+      name: introRoom_0
       rect:
         serializedVersion: 2
         x: 0
@@ -128,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: db3c74d8208a00070800000000000000
-      internalID: 8070635261161620413
+      spriteID: d29026f0b5482b530800000000000000
+      internalID: 3869300556499650861
       vertices: []
       indices: 
       edges: []
@@ -148,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      intro room1.2_0: 8070635261161620413
+      introRoom_0: 3869300556499650861
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

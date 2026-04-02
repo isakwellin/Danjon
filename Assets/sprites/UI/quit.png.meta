@@ -1,10 +1,19 @@
 fileFormatVersion: 2
-guid: 4692520a9d43eb543a29c10a244e42cf
+guid: 35a8f85348d8b2644ae3afe0475c0c44
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 8679083956544436308
-    second: battleRoom1_0
+      213: 5398283193359031274
+    second: quit_0
+  - first:
+      213: 1336899241092420851
+    second: quit_1
+  - first:
+      213: -5410376967538941842
+    second: quit_2
+  - first:
+      213: 3081857404903652501
+    second: quit_3
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +109,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: battleRoom1_0
+      name: quit_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 350
-        height: 196
+        x: 21
+        y: 102
+        width: 98
+        height: 120
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +124,74 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 4587f9defdc427870800000000000000
-      internalID: 8679083956544436308
+      spriteID: aeb502986fd8aea40800000000000000
+      internalID: 5398283193359031274
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: quit_1
+      rect:
+        serializedVersion: 2
+        x: 134
+        y: 106
+        width: 96
+        height: 115
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3f49dcdc6ce9d8210800000000000000
+      internalID: 1336899241092420851
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: quit_2
+      rect:
+        serializedVersion: 2
+        x: 248
+        y: 108
+        width: 23
+        height: 113
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e60e2ec30da7ae4b0800000000000000
+      internalID: -5410376967538941842
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: quit_3
+      rect:
+        serializedVersion: 2
+        x: 284
+        y: 108
+        width: 89
+        height: 113
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 59c70bb3bf4f4ca20800000000000000
+      internalID: 3081857404903652501
       vertices: []
       indices: 
       edges: []
@@ -135,7 +210,10 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      battleRoom1_0: 8679083956544436308
+      quit_0: 5398283193359031274
+      quit_1: 1336899241092420851
+      quit_2: -5410376967538941842
+      quit_3: 3081857404903652501
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
