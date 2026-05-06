@@ -17,7 +17,6 @@ public class arrow : MonoBehaviour
         // mus position
         Vector3 mouseScreenPos = Mouse.current.position.ReadValue();
         Vector3 mouseWorldPos = Camera.main.ScreenToWorldPoint(mouseScreenPos);
-        mouseWorldPos.z = 0f;
 
         // ta reda på riktningen
         Vector2 dir = (mouseWorldPos - transform.position).normalized;
@@ -32,10 +31,11 @@ public class arrow : MonoBehaviour
 
     void Update()
     {
+        //tid innan melee attack försvinner
         if (isMelee == 1)
             Invoke(nameof(meleeAttackDuration), 0.25f);
-
-        // 5. Move forward
+        
+        //rör vapnet
         transform.position += (Vector3)moveDirection * speed * Time.deltaTime;
     }
 

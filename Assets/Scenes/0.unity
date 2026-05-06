@@ -1033,6 +1033,16 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 1254627462037600025, guid: 52ab725f7c5ff4645b72bdbb5318ac6d, type: 3}
   m_PrefabInstance: {fileID: 1660583803}
   m_PrefabAsset: {fileID: 0}
+--- !u!95 &1559294313 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 4588581902150405296, guid: 52ab725f7c5ff4645b72bdbb5318ac6d, type: 3}
+  m_PrefabInstance: {fileID: 1660583803}
+  m_PrefabAsset: {fileID: 0}
+--- !u!212 &1559294314 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 8738013663719896511, guid: 52ab725f7c5ff4645b72bdbb5318ac6d, type: 3}
+  m_PrefabInstance: {fileID: 1660583803}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1660583803
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1045,6 +1055,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: player
       objectReference: {fileID: 0}
+    - target: {fileID: 1816761235778008192, guid: 52ab725f7c5ff4645b72bdbb5318ac6d, type: 3}
+      propertyPath: isMelee
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1816761235778008192, guid: 52ab725f7c5ff4645b72bdbb5318ac6d, type: 3}
+      propertyPath: animator
+      value: 
+      objectReference: {fileID: 1559294313}
+    - target: {fileID: 1816761235778008192, guid: 52ab725f7c5ff4645b72bdbb5318ac6d, type: 3}
+      propertyPath: spriteRenderer
+      value: 
+      objectReference: {fileID: 1559294314}
     - target: {fileID: 2509408567510302236, guid: 52ab725f7c5ff4645b72bdbb5318ac6d, type: 3}
       propertyPath: slider
       value: 
@@ -1101,6 +1123,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8738013663719896511, guid: 52ab725f7c5ff4645b72bdbb5318ac6d, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -5318665934095015927, guid: 99e93e737ae471d4c9eb07123c569e26, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
